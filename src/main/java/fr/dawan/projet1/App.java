@@ -16,6 +16,7 @@ public class App
 	
 	private static Logger myLoggerError = LogManager.getLogger("myLogger2"); 
 	
+	private static Logger myLogger2 = LogManager.getLogger(App.class.getName());
 	
     public static void main( String[] args )
     {
