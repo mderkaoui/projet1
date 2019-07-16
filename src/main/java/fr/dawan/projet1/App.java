@@ -27,7 +27,7 @@ public class App
     
         
         int x = 5;
-        int y = 45;
+        int y = 15;
         
         
     }
