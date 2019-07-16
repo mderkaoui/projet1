@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- version du Maven -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- identifiant unique du projet -->
+	<groupId>fr.dawan</groupId>
+	<artifactId>projet1</artifactId>
+	<version>0.0.1</version>
+
+	<!-- type d'archive à construire -->
+	<packaging>jar</packaging>
+
+	<name>projet1</name>
+	<url>http://www.dawan.fr/projet1</url>
+	<description>Ceci est un projet pédagogique</description>
+	<organization>
+		<name>Dawan</name>
+		<url>https://www.dawan.fr</url>
+	</organization>
+
+	<!-- Variables globales qu'on peut réutiliser avec ${nomVariable} -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.12</junit.version>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.4.0.905</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+	<!-- Ajout de repositories -->
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+
+	<!-- Dépendances qui seront téléchargées depuis un ou plusieurs dépôts (repositories) -->
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<!-- plugins permettant de générer des rapports qui seront intégrés dans 
+		le site web du projet -->
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+
+
+
+
+
+</project>

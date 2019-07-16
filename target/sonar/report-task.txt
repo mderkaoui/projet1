@@ -1,0 +1,6 @@
+projectKey=fr.dawan:projet1
+serverUrl=http://localhost:9000
+serverVersion=7.4.0.18908
+dashboardUrl=http://localhost:9000/dashboard?id=fr.dawan%3Aprojet1
+ceTaskId=AWv2QbmMm75opRffzgmg
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWv2QbmMm75opRffzgmg
